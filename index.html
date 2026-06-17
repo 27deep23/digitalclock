@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body>
+    <marquee><h1 id="clock"></h1></marquee>
+    <style>
+        body{
+            justify-content: center;
+            display: flex;
+            background-color:antiquewhite
+        }
+        #clock{
+            background-color: rgb(93, 199, 240);
+            color: #170b0b;
+            border-radius: 20%;
+            padding: 10x;
+            margin-top:20%;
+            margin-left:40%;
+            margin-right:40%;
+            text-align: center;
+            border:solid;
+            border-color: rgb(29, 27, 25);
+        }
+        marquee{
+            
+        }
+        
+    </style>
+    <script>
+        function cloc(){
+            let now=new Date();
+            let h = now.getHours();
+            let m = now.getMinutes();
+            let s = now.getSeconds();
+            let me = "AM";
+            if(h>12){
+                h=h-12;
+            }
+            if(h>=12){
+                me="PM";
+            }
+            if(h<10){
+                h="0"+h;
+            }
+            if(m<10){
+                m="0"+m;
+            }
+            if(s<10){
+                s="0"+s;
+            }
+             document.getElementById("clock").innerHTML = h+":"+m+":"+s+me;
+
+        }
+       setInterval(cloc,1000);
+    </script>
+
+</body>
+</html>
+
+
+
+<!--
+set timeout->the action will perform after a certain amount of time delay
+set interval->the action wil perform until
+-->
