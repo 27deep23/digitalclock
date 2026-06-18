@@ -37,11 +37,11 @@
             let m = now.getMinutes();
             let s = now.getSeconds();
             let me = "AM";
-            if(h>12){
-                h=h-12;
-            }
             if(h>=12){
                 me="PM";
+            }
+            if(h>12){
+                h=h-12;
             }
             if(h<10){
                 h="0"+h;
